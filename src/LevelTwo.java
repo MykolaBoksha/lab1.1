@@ -1,20 +1,25 @@
 import java.util.LinkedList;
+import java.util.List;
 
 public class LevelTwo {
     public static void main(String[] args) {
-        System.out.println("\n--- Рівень 2: Зв'язана структура (LinkedList) ---");
+        System.out.println("\n--- Рівень 2: Список зі зв'язаним розміщенням (LinkedList) ---");
 
-        LinkedList<String> linkedList = new LinkedList<>();
-        linkedList.add("Node_A");
-        linkedList.add("Node_B");
-        linkedList.add("Node_C");
-        linkedList.addFirst("Start_Node"); // специфічно для зв'язаного списку
 
-        System.out.println("Вміст після вставки: " + linkedList);
+        List<String> linkedList = new LinkedList<>();
 
-        linkedList.remove("Node_B");
-        linkedList.removeLast();
+        linkedList.add("50");
+        linkedList.add("12");
+        linkedList.add("88");
+        linkedList.add("3");
+        System.out.println("Вміст списку після вставки: " + linkedList);
 
-        System.out.println("Вміст після видалення: " + linkedList);
+
+        if (linkedList.size() >= 2) {
+            linkedList.remove(0); // видалення першого
+            linkedList.remove(linkedList.size() - 1); // видалення останнього
+        }
+
+        System.out.println("Вміст списку після видалення: " + linkedList);
     }
 }

@@ -1,22 +1,22 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class LevelOne {
     public static void main(String[] args) {
-        System.out.println("--- Рівень 1: Векторна структура (ArrayList) ---");
+        System.out.println("--- Рівень 1: Список з векторним розміщенням (ArrayList) ---");
 
-        // екземпляр
-        ArrayList<Integer> vectorList = new ArrayList<>();
-        vectorList.add(10);
-        vectorList.add(20);
-        vectorList.add(30);
-        vectorList.add(40);
-        vectorList.add(50);
-        System.out.println("Вміст після вставки: " + vectorList);
+        List<String> vectorList = new ArrayList<>();
 
-        // видалення
-        vectorList.remove(Integer.valueOf(20)); // видалення за значенням
-        vectorList.remove(0);  // видалення за індексом
+        vectorList.add("15");
+        vectorList.add("42");
+        vectorList.add("7");
+        vectorList.add("100");
+        vectorList.add("23");
+        System.out.println("Вміст списку після вставки: " + vectorList);
 
-        System.out.println("Вміст після видалення: " + vectorList);
+        vectorList.remove("42");
+        vectorList.remove(0);
+
+        System.out.println("Вміст списку після видалення: " + vectorList);
     }
 }
